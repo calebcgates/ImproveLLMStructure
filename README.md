@@ -51,7 +51,7 @@ When building agentic AI systems with multiple specialized models, each model mi
 
 ## Prerequisites
 
-- Python 3.6 or newer
+- Python 3.10 or newer
 - Conda environment (recommended)
 - Hugging Face model (8-bit quantized model recommended)
 - Basic understanding of API communication
