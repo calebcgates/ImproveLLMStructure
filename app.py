@@ -7,6 +7,7 @@ import traceback
 import uvicorn
 from fastapi import FastAPI, Request, Response
 from fastapi.responses import PlainTextResponse, JSONResponse, HTMLResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 from config import DEFAULT_OUTPUT_FORMAT
 from prompt_handler import handle_user_request
@@ -22,6 +23,16 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(leve
 logger = logging.getLogger(__name__)
 
 app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
+
 learner = Learner()
 
 @app.post("/ask")

@@ -1,0 +1,7 @@
+curl -X POST \
+  http://localhost:5025/ask \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Write a Python script that processes a CSV file and creates a summary report",
+    "output_format": "python"
+  }'

@@ -72,6 +72,39 @@ Follow the setup requirements here:
 
 https://www.loom.com/share/f19ac59a21ad4fd4b422552e958b3385?sid=1e26e48d-2643-4003-9288-1e65eb02de0f
 
+3. Install git-lfs (required for downloading the model):
+```bash
+# For macOS using Homebrew
+brew install git-lfs
+
+# Initialize git-lfs
+git lfs install
+```
+
+4. Download the phi-4-8bit model:
+```bash
+# Create a local_models directory
+mkdir local_models
+cd local_models
+
+# Clone the model repository
+# Note: This will download approximately 15GB of model files and may take several minutes
+git clone https://huggingface.co/mlx-community/phi-4-8bit --progress
+
+# If you want to clone without large files - just their pointers
+# GIT_LFS_SKIP_SMUDGE=1 git clone https://huggingface.co/mlx-community/phi-4-8bit
+```
+
+5. Install the required Python packages:
+```bash
+pip install mlx-lm
+```
+
+6. Copy the local_model.py file to the model directory:
+```bash
+# From the project root directory
+cp local_model.py local_models/phi-4-8bit/
+```
 
 3. Download a Hugging Face model (8-bit quantized model recommended) and place it in the project directory.
 
@@ -79,6 +112,10 @@ https://www.loom.com/share/f19ac59a21ad4fd4b422552e958b3385?sid=1e26e48d-2643-40
 
 1. Start the local model server:
 ```bash
+# Navigate to the model directory
+cd local_models/phi-4-8bit
+
+# Start the server
 python local_model.py
 ```
 This will start the server on port 5015 by default.

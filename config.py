@@ -1,7 +1,7 @@
 # config.py
 
 # --- LLM API ---
-LLM_API_ENDPOINT = "http://localhost:5030/ask"
+LLM_API_ENDPOINT = "http://localhost:5015/ask"
 LLM_API_TIMEOUT = 450  # Timeout for LLM API requests in seconds
 
 # --- Defaults ---

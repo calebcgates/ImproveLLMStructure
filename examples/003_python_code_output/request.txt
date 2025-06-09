@@ -1,0 +1,7 @@
+curl -X POST \
+  http://localhost:5025/ask \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Write a Python function that calculates the Fibonacci sequence",
+    "output_format": "python"
+  }'

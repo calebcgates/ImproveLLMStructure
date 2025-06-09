@@ -1,0 +1,7 @@
+curl -X POST \
+  http://localhost:5025/ask \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Create an HTML table for a weekly schedule with Monday to Friday, 9 AM to 5 PM",
+    "output_format": "html"
+  }'

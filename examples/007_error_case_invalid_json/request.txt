@@ -1,0 +1,8 @@
+curl -X POST \
+  http://localhost:5025/ask \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Convert this to JSON",
+    "output_format": "json"
+    "missing": "comma"
+  }'

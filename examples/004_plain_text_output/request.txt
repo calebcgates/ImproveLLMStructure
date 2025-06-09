@@ -1,0 +1,7 @@
+curl -X POST \
+  http://localhost:5025/ask \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Write a short story about a robot learning to paint",
+    "output_format": "text"
+  }'

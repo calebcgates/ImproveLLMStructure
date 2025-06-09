@@ -1,0 +1,6 @@
+curl -X POST \
+  http://localhost:5025/ask \
+  -H "Content-Type: application/json" \
+  -d '{
+    "output_format": "json"
+  }'
