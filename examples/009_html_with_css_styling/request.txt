@@ -1,0 +1,7 @@
+curl -X POST \
+  http://localhost:5025/ask \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Create a responsive HTML page with CSS for a product catalog",
+    "output_format": "html"
+  }'

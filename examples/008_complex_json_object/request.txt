@@ -1,0 +1,7 @@
+curl -X POST \
+  http://localhost:5025/ask \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Create a JSON object representing a company with departments, employees, and their salaries",
+    "output_format": "json"
+  }'

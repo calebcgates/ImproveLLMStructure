@@ -1,0 +1,7 @@
+curl -X POST \
+  http://localhost:5025/ask \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Convert this text to json: Name: John Smith, Age: 35, Occupation: Software Engineer, Skills: Python, JavaScript, SQL",
+    "output_format": "json"
+  }'
