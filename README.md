@@ -56,6 +56,10 @@ When building agentic AI systems with multiple specialized models, each model mi
 - Hugging Face model (8-bit quantized model recommended)
 - Basic understanding of API communication
 
+# Complete Setup Tutorial
+
+https://www.loom.com/share/51b53e0a7200458a97923b21a0cc2d69?sid=df63c202-f36f-4db4-a800-635027cf25a2
+
 ## Installation
 
 1. Clone the repository:
