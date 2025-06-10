@@ -1,0 +1,95 @@
+To create a responsive HTML page for a product catalog using the provided JSON data, we'll structure the data into an HTML table format. Below is an example of how you can format the data into HTML, assuming the JSON data includes fields like `id`, `name`, `description`, `price`, and `image_url`. I'll provide a sample JSON structure and the corresponding HTML table.
+
+### Sample JSON Data
+[
+    {
+        "id": 1,
+        "name": "Product A",
+        "description": "This is a great product.",
+        "price": "$19.99",
+        "image_url": "https://example.com/image-a.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Product B",
+        "description": "Another amazing product.",
+        "price": "$29.99",
+        "image_url": "https://example.com/image-b.jpg"
+    }
+]
+### HTML Structure
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    img {
+        max-width: 100px;
+        height: auto;
+    }
+    @media (max-width: 600px) {
+        table, thead, tbody, th, td, tr {
+            display: block;
+        }
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        tr { border: 1px solid #ccc; }
+        td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+        td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            content: attr(data-label);
+            font-weight: bold;
+        }
+    }
+</style>
+<table>
+<thead>
+<tr>
+<th>Image</th>
+<th>Name</th>
+<th>Description</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Product A" src="https://example.com/image-a.jpg"/></td>
+<td data-label="Name">Product A</td>
+<td data-label="Description">This is a great product.</td>
+<td data-label="Price">$19.99</td>
+</tr>
+<tr>
+<td><img alt="Product B" src="https://example.com/image-b.jpg"/></td>
+<td data-label="Name">Product B</td>
+<td data-label="Description">Another amazing product.</td>
+<td data-label="Price">$29.99</td>
+</tr>
+</tbody>
+</table>
+### Explanation
+- **CSS**: The CSS ensures the table is responsive. It uses media queries to adjust the table layout for smaller screens, transforming it into a block layout where each cell is displayed as a block with a label.
+- **HTML Table**: The table is structured with headers and rows corresponding to the JSON data. Each product is represented as a row with columns for the image, name, description, and price.
+- **Responsive Design**: The `@media` query ensures that on smaller screens, the table adapts to a more readable format by displaying each cell as a block with a label.
+
+This setup will create a responsive product catalog page that adjusts to different screen sizes.

@@ -1,0 +1,44 @@
+{
+    "company": "Tech Innovations Inc.",
+    "departments": [
+      {
+        "name": "Engineering",
+        "employees": [
+          {
+            "name": "Alice Johnson",
+            "salary": 95000
+          },
+          {
+            "name": "Bob Smith",
+            "salary": 105000
+          }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "employees": [
+          {
+            "name": "Carol White",
+            "salary": 78000
+          },
+          {
+            "name": "David Brown",
+            "salary": 82000
+          }
+        ]
+      },
+      {
+        "name": "Sales",
+        "employees": [
+          {
+            "name": "Eve Davis",
+            "salary": 67000
+          },
+          {
+            "name": "Frank Wilson",
+            "salary": 72000
+          }
+        ]
+      }
+    ]
+  }
